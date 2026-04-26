@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lector EPUB</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Lector EPUB</h1>
+    <div class="controls">
+      <label for="fileInput" class="btn">Abrir EPUB</label>
+      <input type="file" id="fileInput" accept=".epub" />
+      <span class="file-name" id="fileNameDisplay">Ningún archivo seleccionado</span>
+      <button class="btn" id="prevBtn" disabled>Anterior</button>
+      <span id="pageCounter" class="page-counter"></span>
+      <button class="btn" id="nextBtn" disabled>Siguiente</button>
+    </div>
+  </header>
+  
+  <main class="viewer-container">
+    <div id="viewer">
+      <div class="placeholder-text">Sube o arrastra un archivo EPUB aquí para comenzar a leer</div>
+    </div>
+  </main>
+
+  <script src="jszip.min.js"></script>
+  <script src="EpubService.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
